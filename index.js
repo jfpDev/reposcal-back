@@ -8,16 +8,6 @@ const cors = require('cors');
 
 admin.initializeApp();
 
-const firebaseConfig = {
-  apiKey: "AIzaSyB24DHLZrps0y0yGEfZ4QaMXFxpEYjnW20",
-  authDomain: "reposcal.firebaseapp.com",
-  projectId: "reposcal",
-  storageBucket: "reposcal.appspot.com",
-  messagingSenderId: "127062197976",
-  appId: "1:127062197976:web:378446821a2983fde6b9ad"
-};
-
-firebase.initializeApp(firebaseConfig);
 
 const app = express();
 const db = admin.firestore();
@@ -92,4 +82,3 @@ app.patch('/update', (req, res) => {
 exports.api = functions.https.onRequest(app);
 
 
-//db.doc(`${username}/${id}`).set(newData)
